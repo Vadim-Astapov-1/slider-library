@@ -1,0 +1,9 @@
+.app {
+  font-family: 'Inter', 'Arial', sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: #202C75;
+  color: #ffffff;
+}
