@@ -1,17 +1,17 @@
 import './App.css';
 import Main from '../Main/Main';
-import FlexSlaider from '../FlexSlaider/FlexSlaider';
-import SlowSlaider from '../SlowSlaider/SlowSlaider';
-import LongSlaider from '../LongSlaider/LongSlaider';
+import FlexSlider from '../FlexSlaider/FlexSlider';
+import SlowSlider from '../SlowSlaider/SlowSlider';
+import LongSlider from '../LongSlaider/LongSlider';
 
 function App() {
   return (
     <div className="app">
       <header className='header'></header>
       <Main>
-        <FlexSlaider />
-        <SlowSlaider />
-        <LongSlaider />
+        <FlexSlider />
+        <SlowSlider />
+        <LongSlider />
       </Main>
     </div>
   );
