@@ -8,8 +8,8 @@ import gorod from '../../images/gorod.jpg';
 function Flexslider() {
   return(
     <div className='flex-slider'>
-      <h2 className='flex-slider__section-title'>Панорама</h2>
-      <p className='flex-slider__section-description'>При наведение на изображение, оно раскроется вместе с описанием.</p>
+      <h2 className='title flex-slider__section-title'>Панорама</h2>
+      <p className='description flex-slider__section-description'>При наведение на изображение, оно раскроется вместе с описанием.</p>
       <div className='flex-slider__container'>
         <article className='flex-slider__slaid'>
           <img className='flex-slider__img' src={devushka} alt='devushka'></img>

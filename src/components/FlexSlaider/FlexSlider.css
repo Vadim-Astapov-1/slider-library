@@ -1,5 +1,4 @@
 .flex-slider {
-  background-color: #202C75;
   max-width: 100%;
   margin: 0 auto;
   padding-top: 80px;
@@ -9,24 +8,12 @@
 
 .flex-slider__section-title {
   max-width: 303px;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 44px;
-  color: #FFFFFF;
   margin: 0 auto 0 0;
-  padding: 0;
 }
 
 .flex-slider__section-description {
-  max-width: 620px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 29px;
-  color: #FFFFFF;
+  max-width: 627px;
   margin: 10px auto 0 0;
-  padding: 0;
 }
 
 .flex-slider__container {

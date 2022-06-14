@@ -3,7 +3,7 @@ import bereg from '../images/bereg.jpg';
 import derevia from '../images/derevia.jpg';
 import gorod from '../images/gorod.jpg';
 import most from '../images/most.jpg';
-import zamok from '../images/zamok.jpg';
+import ozero from '../images/ozero.jpg';
 
 export const dataSlowSlaider = [
   {
@@ -11,8 +11,8 @@ export const dataSlowSlaider = [
     img: bereg,
   },
   {
-    name: 'Замок Юнзы',
-    img: zamok,
+    name: 'Озеро Юнзы',
+    img: ozero,
   },
   {
     name: 'Река скорби',
@@ -37,6 +37,6 @@ export const dataLongSlaider = [
     img: most,
   },
   {
-    img: zamok,
+    img: ozero,
   },
 ];
