@@ -39,7 +39,6 @@ function SlowSlaider() {
       handleOnClick();
     }, 6000);
 
-    console.log('check')
     return () => clearInterval(interval);
   });
 
