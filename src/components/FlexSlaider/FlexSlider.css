@@ -60,10 +60,6 @@
   flex-basis: 625px;
 }
 
-.flex-slider__slaid:hover {
-  flex-basis: 625px;
-}
-
 .flex-slider__slaid:last-child {
   border: 0;
 }
