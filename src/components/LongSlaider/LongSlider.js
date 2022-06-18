@@ -7,17 +7,19 @@ function LongSlaider() {
   const [sliders, setSliders] = useState([]);
   const [koordination, setKoordination] = useState(0);
   const [animation, setAnimation] = useState(false);
+  // Защита при перелистывании
   const [btnDisabled, setBtnDisabled] = useState(false);
+
   let styleKo = {
     transform: `translateX(${koordination}px)`,
   };
 
-  // готово
   function backSlide() {
     setBtnDisabled(true);
     setAnimation(true);
     setKoordination(-960);
 
+    // После анимации перестроится массив и вернутся начальные координаты.
     setTimeout(() => {
       let partSlide = sliders.slice(0, 4);
       let partSlideTwo = sliders.slice(4, 8);
@@ -29,24 +31,31 @@ function LongSlaider() {
     }, 1500);
   }
 
+  // Сначало перестраиваем массив, потом смотрим анимацию.
   function nextSlide() {
-    setBtnDisabled(true);
-    setAnimation(false);
-    setKoordination(-960);
+    const promise = new Promise((resolve, reject) => {
+      setBtnDisabled(true);
+      setAnimation(false);
+      setKoordination(-960);
 
-    let partSlide = sliders.slice(0, 4);
-    let partSlideTwo = sliders.slice(4, 8);
-    setSliders(partSlideTwo.concat(partSlide));
+      let partSlide = sliders.slice(0, 4);
+      let partSlideTwo = sliders.slice(4, 8);
+      setSliders(partSlideTwo.concat(partSlide));
 
-    setTimeout(() => {
+      resolve();
+    });
+
+    promise
+    .then(() => {
+      // Асинхронный код ради этих двух строк, чтобы после перестройки массива произошло перелистывание.
       setAnimation(true);
       setKoordination(0)
-    }, 1);
-
-    setTimeout(() => {
-      setAnimation(false);
-      setBtnDisabled(false);
-    }, 1500);
+    }).then(() => {
+      setTimeout(() => {
+        setAnimation(false);
+        setBtnDisabled(false);
+      }, 1500);
+    })
   }
 
   useEffect(() => {
