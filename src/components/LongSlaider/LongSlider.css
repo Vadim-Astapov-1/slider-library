@@ -2,8 +2,6 @@
   max-width: 100%;
   margin: 80px auto 0 auto;
   padding-bottom: 80px;
-  border-bottom: 1px solid #FFFFFF;
-  position: relative;
 }
 
 .long-slider__section-title {
@@ -19,6 +17,11 @@
 .long-slider__container {
   max-width: 960px;
   margin: 73px auto 55px;
+  position: relative;
+}
+
+.long-slider__display {
+  max-width: 100%;
   border-radius: 25px;
   overflow: hidden;
 }
@@ -44,21 +47,28 @@
 
 .long-slider__btn {
   width: 45px;
-  height: 45px;
-  background: url('../../images/strelka.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  height: 50px;
   border: 0;
+  background-size: cover;
+  background-color: #202C75;
+  background-position: center;
+  background-repeat: no-repeat;
   position: absolute;
-  top: 250px;
+  top: 97px;
+  border-radius: 25%;
+  transition: 0.5s;
 }
 
 .long-slider__btn_postion_left {
-  left: 55px;
-  transform: rotate(180deg);
+  background-image: url('../../images/arrow.svg');
+  left: -64px;
 }
 
 .long-slider__btn_postion_right {
-  right: 55px;
+  background-image: url('../../images/arrow-right.svg');
+  right: -64px;
+}
+
+.long-slider__btn:hover {
+  transform: scale(1.3);
 }

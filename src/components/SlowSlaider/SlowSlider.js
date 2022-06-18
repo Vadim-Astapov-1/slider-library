@@ -53,10 +53,10 @@ function SlowSlaider() {
         <img className='slow-slider__img' alt='auto' src={auto}></img>
         </div>
       </div>
-      <div className='slow-slider__btns'>
-        <input type='checkbox' className='slow-slider__btn' onChange={handleChangeOne} checked={true && positionSlide === 1}></input>
-        <input type='checkbox' className='slow-slider__btn' onChange={handleChangeTwo} checked={true && positionSlide === 2}></input>
-        <input type='checkbox' className='slow-slider__btn' onChange={handleChangeThree} checked={true && positionSlide === 3}></input>
+      <div className='slow-slider__checkboxs'>
+        <input type='checkbox' className='slow-slider__checkbox' onChange={handleChangeOne} checked={true && positionSlide === 1}></input>
+        <input type='checkbox' className='slow-slider__checkbox' onChange={handleChangeTwo} checked={true && positionSlide === 2}></input>
+        <input type='checkbox' className='slow-slider__checkbox' onChange={handleChangeThree} checked={true && positionSlide === 3}></input>
       </div>
     </div>
   );
