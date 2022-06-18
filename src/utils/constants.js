@@ -1,42 +1,43 @@
-import auto from '../images/auto.jpg';
+import volna from '../images/volna.jpg';
+import kamni from '../images/kamni.jpg';
+import zakat from '../images/zakat.jpg';
+import krasnaiSakura from '../images/krasnaiSakura.jpg';
 import bereg from '../images/bereg.jpg';
-import derevia from '../images/derevia.jpg';
-import gorod from '../images/gorod.jpg';
-import most from '../images/most.jpg';
-import ozero from '../images/ozero.jpg';
-
-export const dataSlowSlaider = [
-  {
-    name: 'Горы Швейцарии',
-    img: bereg,
-  },
-  {
-    name: 'Озеро Юнзы',
-    img: ozero,
-  },
-  {
-    name: 'Река скорби',
-    img: derevia,
-  }
-];
+import vodopad from '../images/vodopad.jpg';
+import kamennuiMost from '../images/kamennuiMost.jpg';
+import kamenOzero from '../images/kamenOzero.jpg';
 
 export const dataLongSlaider = [
   {
-    img: auto,
+    name: volna,
+    img: volna,
   },
   {
+    name: kamni,
+    img: kamni,
+  },
+  {
+    name: zakat,
+    img: zakat,
+  },
+  {
+    name: krasnaiSakura,
+    img: krasnaiSakura,
+  },
+  {
+    name: bereg,
     img: bereg,
   },
   {
-    img: derevia,
+    name: vodopad,
+    img: vodopad,
   },
   {
-    img: gorod,
+    name: kamennuiMost,
+    img: kamennuiMost,
   },
   {
-    img: most,
-  },
-  {
-    img: ozero,
+    name: kamenOzero,
+    img: kamenOzero,
   },
 ];

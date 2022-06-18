@@ -1,0 +1,64 @@
+.long-slider {
+  max-width: 100%;
+  margin: 80px auto 0 auto;
+  padding-bottom: 80px;
+  border-bottom: 1px solid #FFFFFF;
+  position: relative;
+}
+
+.long-slider__section-title {
+  max-width: 429px;
+  margin: 0 auto 0 0;
+}
+
+.long-slider__section-description {
+  max-width: 627px;
+  margin: 10px auto 0 0;
+}
+
+.long-slider__container {
+  max-width: 960px;
+  margin: 73px auto 55px;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.long-slider__list-img {
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  border-radius: 25px;
+}
+
+.long-slider__list-img_transition_active {
+  transition: 1.5s;
+}
+
+.long-slider__img {
+  width: 240px;
+  height: 240px;
+  transition: 1.5s;
+  object-fit: cover;
+  object-position: center;
+}
+
+.long-slider__btn {
+  width: 45px;
+  height: 45px;
+  background: url('../../images/strelka.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border: 0;
+  position: absolute;
+  top: 250px;
+}
+
+.long-slider__btn_postion_left {
+  left: 55px;
+  transform: rotate(180deg);
+}
+
+.long-slider__btn_postion_right {
+  right: 55px;
+}

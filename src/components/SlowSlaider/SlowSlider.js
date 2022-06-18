@@ -8,19 +8,19 @@ import { useEffect, useState } from 'react';
 function SlowSlaider() {
   const [positionSlide, setPositionSlide] = useState(2);
 
-  function changingSlideOne(evt) {
+  function handleChangeOne(evt) {
     if(evt.target.checked) {
       setPositionSlide(1);
     }
   }
 
-  function changingSlideTwo(evt) {
+  function handleChangeTwo(evt) {
     if(evt.target.checked) {
       setPositionSlide(2);
     }
   }
 
-  function changingSlideThree(evt) {
+  function handleChangeThree(evt) {
     if(evt.target.checked) {
       setPositionSlide(3);
     }
@@ -54,9 +54,9 @@ function SlowSlaider() {
         </div>
       </div>
       <div className='slow-slider__btns'>
-        <input type='checkbox' className='slow-slider__btn' onChange={changingSlideOne} checked={true && positionSlide === 1}></input>
-        <input type='checkbox' className='slow-slider__btn' onChange={changingSlideTwo} checked={true && positionSlide === 2}></input>
-        <input type='checkbox' className='slow-slider__btn' onChange={changingSlideThree} checked={true && positionSlide === 3}></input>
+        <input type='checkbox' className='slow-slider__btn' onChange={handleChangeOne} checked={true && positionSlide === 1}></input>
+        <input type='checkbox' className='slow-slider__btn' onChange={handleChangeTwo} checked={true && positionSlide === 2}></input>
+        <input type='checkbox' className='slow-slider__btn' onChange={handleChangeThree} checked={true && positionSlide === 3}></input>
       </div>
     </div>
   );
