@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/slider-library/static/css/main.30f1fdb0.css",
+    "main.js": "/slider-library/static/js/main.61dd452d.js",
+    "static/js/787.0f116b0d.chunk.js": "/slider-library/static/js/787.0f116b0d.chunk.js",
+    "static/media/volna.jpg": "/slider-library/static/media/volna.e16ae29fb98042c70ff0.jpg",
+    "static/media/kamenOzero.jpg": "/slider-library/static/media/kamenOzero.2fbadea9fbcbe7e31a88.jpg",
+    "static/media/derevia.jpg": "/slider-library/static/media/derevia.97341d68adca73bb329e.jpg",
+    "static/media/bereg.jpg": "/slider-library/static/media/bereg.c2390cc1cb89c513d365.jpg",
+    "static/media/kamni.jpg": "/slider-library/static/media/kamni.c69150188e152d524832.jpg",
+    "static/media/most.jpg": "/slider-library/static/media/most.415e5f1569f833a53b99.jpg",
+    "static/media/gorod.jpg": "/slider-library/static/media/gorod.c25b19e3a8951add6b19.jpg",
+    "static/media/auto.jpg": "/slider-library/static/media/auto.78c57efe0f82a362f1bb.jpg",
+    "static/media/ozero.jpg": "/slider-library/static/media/ozero.98297f818c4a858b3091.jpg",
+    "static/media/devushka.jpg": "/slider-library/static/media/devushka.9b43d6fc93a39cb676b2.jpg",
+    "static/media/vodopad.jpg": "/slider-library/static/media/vodopad.8c55c00e272160bca3c5.jpg",
+    "static/media/krasnaiSakura.jpg": "/slider-library/static/media/krasnaiSakura.11a8af8e2e3c64a51dfc.jpg",
+    "static/media/zakat.jpg": "/slider-library/static/media/zakat.daf3af99cd52fdd069ac.jpg",
+    "static/media/kamennuiMost.jpg": "/slider-library/static/media/kamennuiMost.bec5c4ad5ed1b4387356.jpg",
+    "static/media/Inter-Medium.woff": "/slider-library/static/media/Inter-Medium.9053572c46aeb4b16caa.woff",
+    "static/media/Inter-Black.woff": "/slider-library/static/media/Inter-Black.c6938660eec019fefd68.woff",
+    "static/media/Inter-Regular.woff": "/slider-library/static/media/Inter-Regular.8c206db99195777c6769.woff",
+    "static/media/Inter-Medium.woff2": "/slider-library/static/media/Inter-Medium.293fd13dbca5a3e450ef.woff2",
+    "static/media/Inter-Black.woff2": "/slider-library/static/media/Inter-Black.15ca31c0a2a68f76d2d1.woff2",
+    "static/media/Inter-Regular.woff2": "/slider-library/static/media/Inter-Regular.c8ba52b05a9ef10f4758.woff2",
+    "index.html": "/slider-library/index.html",
+    "static/media/strelka.svg": "/slider-library/static/media/strelka.5761bac40a982f54dd19.svg",
+    "main.30f1fdb0.css.map": "/slider-library/static/css/main.30f1fdb0.css.map",
+    "main.61dd452d.js.map": "/slider-library/static/js/main.61dd452d.js.map",
+    "787.0f116b0d.chunk.js.map": "/slider-library/static/js/787.0f116b0d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.30f1fdb0.css",
+    "static/js/main.61dd452d.js"
+  ]
+}
