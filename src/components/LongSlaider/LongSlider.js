@@ -5,29 +5,25 @@ import { dataLongSlaider } from '../../utils/constants';
 
 function LongSlaider() {
   const [sliders, setSliders] = useState([]);
-  const [koordination, setKoordination] = useState(0);
-  const [animation, setAnimation] = useState(false);
+  const [coordinates, setСoordinates] = useState(0);
+  const [isAnimationActive, setIsAnimationActive] = useState(false);
   // Защита при перелистывании
   const [btnDisabled, setBtnDisabled] = useState(false);
 
-  let styleKo = {
-    transform: `translateX(${koordination}px)`,
-  };
+  const partSlider = sliders.slice(0, 4);
+  const partSliderTwo = sliders.slice(4, 8);
 
   function backSlide() {
     setBtnDisabled(true);
-    setAnimation(true);
-    setKoordination(-960);
+    setIsAnimationActive(true);
+    setСoordinates(-960);
 
     // После анимации перестроится массив и вернутся начальные координаты.
     setTimeout(() => {
-      let partSlide = sliders.slice(0, 4);
-      let partSlideTwo = sliders.slice(4, 8);
-
-      setAnimation(false);
-      setSliders(partSlideTwo.concat(partSlide));
-      setKoordination(0);
       setBtnDisabled(false);
+      setIsAnimationActive(false);
+      setSliders(partSliderTwo.concat(partSlider));
+      setСoordinates(0);
     }, 1500);
   }
 
@@ -35,12 +31,11 @@ function LongSlaider() {
   function nextSlide() {
     const promise = new Promise((resolve, reject) => {
       setBtnDisabled(true);
-      setAnimation(false);
-      setKoordination(-960);
+      setIsAnimationActive(false);
 
-      let partSlide = sliders.slice(0, 4);
-      let partSlideTwo = sliders.slice(4, 8);
-      setSliders(partSlideTwo.concat(partSlide));
+      setSliders(partSliderTwo.concat(partSlider));
+
+      setСoordinates(-960)
 
       resolve();
     });
@@ -48,12 +43,12 @@ function LongSlaider() {
     promise
     .then(() => {
       // Асинхронный код ради этих двух строк, чтобы после перестройки массива произошло перелистывание.
-      setAnimation(true);
-      setKoordination(0)
+      setIsAnimationActive(true);
+      setСoordinates(0)
     }).then(() => {
       setTimeout(() => {
-        setAnimation(false);
         setBtnDisabled(false);
+        setIsAnimationActive(false);
       }, 1500);
     })
   }
@@ -67,7 +62,7 @@ function LongSlaider() {
       <h2 className='title long-slider__section-title'>Слайдер - карусель</h2>
       <p className='description long-slider__section-description'>Бесконечная прокрутка изображений.</p>
       <div className='long-slider__container'>
-        <div className={`long-slider__list-img ${animation ? 'long-slider__list-img_transition_active' : ''}`} style={styleKo}>
+        <div className={`long-slider__list-img ${isAnimationActive ? 'long-slider__list-img_transform_active' : ''}`} style={{transform: `translateX(${coordinates}px)`}}>
           {sliders.map((item) => {
             return <img className='long-slider__img' key={item.name} src={item.img} alt={item.name}></img>
           })}

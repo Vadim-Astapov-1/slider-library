@@ -30,7 +30,7 @@
   border-radius: 25px;
 }
 
-.long-slider__list-img_transition_active {
+.long-slider__list-img_transform_active {
   transition: 1.5s;
 }
 
