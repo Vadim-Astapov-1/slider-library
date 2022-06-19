@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# Slider-library
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Это моя маленькая библиотека интересных интерактивных элементов, которые вы можите
+заметить на многих лендинг-страницах, онлайн магазинов и так далее, которые я попытался создать вручную.
 
-## Available Scripts
+## Описание
 
-In the project directory, you can run:
+Проект написан на фреймворке **React** с использованием *javascript, html, css* без каких либо дополнительных библиотек.
 
-### `npm start`
+## Содержание
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- ### Flex-slider
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![alt flex-slider-img](../slaider_react/src/images/readme-images/flex-slider.png)
 
-### `npm test`
+Это раздвижной слайдер похожий на панораму. Сначало при наведении на сам контейнер слайдера, уменьшаются изображения при помощи *flex-basis*. Далее при попадании курсора на картинку, она расширяется, используя это же свойство и сам контейнер увеличивается в размере вместе с ней.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Примечания
 
-### `npm run build`
+В данном элементе не используется *javascript*. Всю магию делает *css*.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- ### Slow-slider
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![alt slow-slider-img](../slaider_react/src/images/readme-images/slow-slider.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Стандартный, типичный слайдер, который можно часто увидеть в интернете. Выравниваем картинки в блоке по горизонтали и перематывает блок с помощью **transform: translateX*. Каждое из трёх изображений имеет свой стейт - **position*, в зависимости от которого на сколько пикселей сдвинится лист с картинками.
 
-### `npm run eject`
+#### Примечания
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Слайды также меняются при нажатиии на сам слайдер. В ином случае они сменятся по таймеру.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- ### Long-slider
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![alt long-slider-img](../slaider_react/src/images/readme-images/long-slider.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Так называемый слайдер - карусель с бесконечной сменой слайдов. При скролле налево, блок изменит свои координаты с помощью *transform: translateX*. Самое интересное происходит при скролле направо. Так как блок всегда стоит с *translateX(0)*, после нажатия на кнопку, перестраиватся массив, меняя слайды местами и установкой начальной координаты на уже сдвиннутое состояние. После чего он просто возвращается снова к координате 0.
 
-## Learn More
+#### Примечания
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Интересный код с использованием *new Promise*, для перестройки массива при скролле направо.
