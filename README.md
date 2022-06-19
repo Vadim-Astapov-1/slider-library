@@ -11,7 +11,7 @@
 
 - ### Flex-slider
 
-![flex-slider-img flex-slider-img](../src/images/readme-images/flex-slider.png)
+![flex-slider-img](https://github.com/Vadim-Astapov-1/slider-library/tree/main/src/images/readme-images/flex-slider.png)
 
 Это раздвижной слайдер похожий на панораму. Сначало при наведении на сам контейнер слайдера, уменьшаются изображения при помощи *flex-basis*. Далее при попадании курсора на картинку, она расширяется, используя это же свойство и сам контейнер увеличивается в размере вместе с ней.
 
@@ -21,7 +21,7 @@
 
 - ### Slow-slider
 
-![flex-slider-img slow-slider-img](../src/images/readme-images/slow-slider.png)
+![slow-slider-img](https://github.com/Vadim-Astapov-1/slider-library/tree/main/src/images/readme-images/slow-slider.png)
 
 Стандартный, типичный слайдер, который можно часто увидеть в интернете. Выравниваем картинки в блоке по горизонтали и перематывает блок с помощью **transform: translateX*. Каждое из трёх изображений имеет свой стейт - **position*, в зависимости от которого на сколько пикселей сдвинится лист с картинками.
 
@@ -31,10 +31,11 @@
 
 - ### Long-slider
 
-![flex-slider-img long-slider-img](../src/images/readme-images/long-slider.png)
+![long-slider-img](https://github.com/Vadim-Astapov-1/slider-library/tree/main/src/images/readme-images/long-slider.png)
 
 Так называемый слайдер - карусель с бесконечной сменой слайдов. При скролле налево, блок изменит свои координаты с помощью *transform: translateX*. Самое интересное происходит при скролле направо. Так как блок всегда стоит с *translateX(0)*, после нажатия на кнопку, перестраиватся массив, меняя слайды местами и установкой начальной координаты на уже сдвиннутое состояние. После чего он просто возвращается снова к координате 0.
 
 #### Примечания
 
 Интересный код с использованием *new Promise*, для перестройки массива при скролле направо.
+
