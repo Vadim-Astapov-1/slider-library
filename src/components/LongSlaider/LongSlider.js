@@ -29,29 +29,47 @@ function LongSlaider() {
 
   // Сначало перестраиваем массив, потом смотрим анимацию.
   function nextSlide() {
-    const promise = new Promise((resolve, reject) => {
-      setIsBtnDisabled(true);
-      setIsAnimationActive(false);
+    setIsBtnDisabled(true);
+    setIsAnimationActive(false);
+    setSliders(partSliderTwo.concat(partSlider));
+    setСoordinates(-960)
 
-      setSliders(partSliderTwo.concat(partSlider));
-
-      setСoordinates(-960)
-
-      resolve();
-    });
-
-    promise
-    .then(() => {
-      // Асинхронный код ради этих двух строк, чтобы после перестройки массива произошло перелистывание.
+    // fix: bug что при очень быстрых кликах на правый скролл, слайды переключались без анимации.
+    setTimeout(() => {
       setIsAnimationActive(true);
       setСoordinates(0)
-    }).then(() => {
-      setTimeout(() => {
-        setIsBtnDisabled(false);
-        setIsAnimationActive(false);
-      }, 1500);
-    })
+    }, 0);
+
+    setTimeout(() => {
+      setIsBtnDisabled(false);
+      setIsAnimationActive(false);
+    }, 1500);
   }
+
+  // Первая версия с bug.
+  //function nextSlide() {
+    //const promise = new Promise((resolve, reject) => {
+      //setIsBtnDisabled(true);
+      //setIsAnimationActive(false);
+
+      //setSliders(partSliderTwo.concat(partSlider));
+
+      //setСoordinates(-960)
+
+      //resolve();
+    //});
+
+    //promise
+    //.then(() => {
+      //setIsAnimationActive(true);
+      //setСoordinates(0)
+    //}).then(() => {
+      //setTimeout(() => {
+        //setIsBtnDisabled(false);
+        //setIsAnimationActive(false);
+      //}, 1500);
+    //})
+  //}
 
   useEffect(() => {
     setSliders(dataLongSlaider);
