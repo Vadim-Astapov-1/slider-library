@@ -21,6 +21,7 @@
 
 В данном элементе не используется javascript. Всю магию делает css.
 
+----
 - ### Slow-slider
 
 ![slow-slider-img](src/images/readme-images/slow-slider.png)
@@ -31,6 +32,7 @@
 
 Слайды также меняются при нажатиии на сам слайдер. В ином случае они сменятся по таймеру.
 
+----
 - ### Long-slider
 
 ![long-slider-img](/src/images/readme-images/long-slider.png)
